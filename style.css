@@ -20,6 +20,7 @@
 body {
     display: flex;
     font-family: sans-serif;
+    min-height: 100vh;
 }
 
 header {
@@ -28,11 +29,11 @@ header {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 header>img {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
