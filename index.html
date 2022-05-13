@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 <body>
-    <aside>
+    <header>
         <img src="images/sidebar.jpg" alt="Green leaf plant in a close up photograph">
-        <div id="sidebar-header-container">
-            <img src="images/odin-lined.png" alt="'The Odin Project' logo made with a white outline">
+        <div>
+            <img src="images/odin-lined.png" alt="'The Odin Project' logo made with a white outline" id="odin-logo">
             <h1 id="sidebar-header-text">Odin</h1>
-            <footer>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></footer>
         </div>
-    </aside>
+        <footer>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></footer>
+    </header>
     <main>
         <h2 id="body-header">
             This is not a real online service! You know you need something like this in your life to help you realize your depest dreams. <br>
             Sign up <em>now</em> to get started. <br><br>
             You <em>know</em> you want to.
         </h2>
-        <form method="post">
+        <form method="post" id="signup">
             <h2>Let's do this!</h2>
             <ul>
                 <li>
@@ -46,6 +46,7 @@
                 <li>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
+                    <div id="err-message"></div>
                 </li>
                 <li>
                     <label for="confirm-password">Confirm Password</label>
@@ -53,7 +54,7 @@
                 </li>
             </ul>
         </form>
-        <button type="submit">Create Account</button>
+        <button type="submit" form="signup">Create Account</button>
         <p>Already have an account? <a href="">Log in</a></p>
     </main>
 </body>

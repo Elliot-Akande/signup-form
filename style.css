@@ -1,0 +1,197 @@
+:root {
+    --white: #FFF;
+    --off-white: #f3f3f3;
+    --shadow: #b4b4b4;
+    --secondary: #000;
+    --accent: #596D48;
+    --accent-hover: #718a5b;
+    --input-border: #E5E7EB;
+    --input-border-focused: #00F;
+    --warning: #c90000;
+    --visited: #551a8b;
+}
+
+@font-face {
+    font-family: 'norse-bold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+        url('fonts/norse-bold-webfont.woff') format('woff');
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+    flex: 4;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+header>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 14px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+
+#odin-logo {
+    height: 8rem;
+}
+
+#sidebar-header-text {
+    color: var(--white);
+    font-family: 'norse-bold', sans-serif;
+    font-size: 6rem;
+    margin: 0;
+}
+
+header>footer {
+    position: absolute;
+    bottom: 14px;
+
+    color: var(--white);
+}
+
+footer>a {
+    color: var(--white);
+}
+
+main {
+    background: var(--off-white);
+    flex: 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#body-header {
+    padding: 50px;
+}
+
+form {
+    padding: 25px 50px 50px;
+    margin-bottom: 40px;
+
+    background: var(--white);
+    box-shadow: 0 5px 10px  var(--shadow);
+}
+
+h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+    margin: 30px 0 0 0;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap:  30px 80px;
+}
+
+ul li {
+    list-style-type: none;
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 22px;
+    font-size: 1rem;
+}
+
+input {
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 8px;
+    width: 300px;
+}
+
+.invalid {
+    border: 1px solid var(--warning);
+}
+
+#err-message {
+    position: relative;
+}
+
+#password.invalid + #err-message::after {
+    content: "* Passwords do not match";
+    color: var(--warning);
+    font-size: 0.9rem;
+
+    position: absolute;
+    top: 2px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--input-border-focused);
+    box-shadow: 4px 4px 6px -2px var(--shadow);
+}
+
+button {
+    background: var(--accent);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 7px var(--shadow);
+
+    align-self: flex-start;
+    width: 300px;
+    margin: 0 0 0 50px;
+    padding: 20px 40px;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+button:active {
+    box-shadow: inset 4px 4px 8px var(--accent);
+}
+
+p {
+    margin: 50px 0 0 50px;
+    font-size: 1.4rem;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+p a:link {
+    color: var(--accent);
+}
+
+p a:visited {
+    color: var(--visited);
+}
